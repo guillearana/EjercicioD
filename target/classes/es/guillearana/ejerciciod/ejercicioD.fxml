@@ -9,20 +9,27 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="591.0" prefWidth="967.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.guillearana.ejerciciod.controlador.EjercicioDcontroller">
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+          prefHeight="591.0" prefWidth="967.0" xmlns="http://javafx.com/javafx/20.0.1"
+          xmlns:fx="http://javafx.com/fxml/1"
+          fx:controller="es.guillearana.ejerciciod.controlador.EjercicioDcontroller">
+
     <columnConstraints>
         <ColumnConstraints hgrow="SOMETIMES" maxWidth="436.0" minWidth="10.0" prefWidth="227.0" />
         <ColumnConstraints hgrow="SOMETIMES" maxWidth="423.0" minWidth="10.0" prefWidth="254.0" />
         <ColumnConstraints hgrow="SOMETIMES" maxWidth="289.0" minWidth="10.0" prefWidth="253.0" />
         <ColumnConstraints hgrow="SOMETIMES" maxWidth="223.0" minWidth="10.0" prefWidth="223.0" />
     </columnConstraints>
+
     <rowConstraints>
         <RowConstraints maxHeight="187.0" minHeight="10.0" prefHeight="119.0" vgrow="SOMETIMES" />
         <RowConstraints maxHeight="223.0" minHeight="10.0" prefHeight="174.0" vgrow="SOMETIMES" />
         <RowConstraints maxHeight="344.0" minHeight="10.0" prefHeight="203.0" vgrow="SOMETIMES" />
         <RowConstraints maxHeight="136.0" minHeight="0.0" prefHeight="55.0" vgrow="SOMETIMES" />
     </rowConstraints>
+
     <children>
+        <!-- Tabla de información de personas -->
         <TableView fx:id="tableInfo" prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="4" GridPane.rowSpan="3">
             <columns>
                 <TableColumn fx:id="colNombre" prefWidth="75.0" text="NOMBRE" />
@@ -36,6 +43,8 @@
                 <Insets left="20.0" right="20.0" top="20.0" />
             </GridPane.margin>
         </TableView>
+
+        <!-- Botón para agregar nueva persona -->
         <FlowPane alignment="CENTER" prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="4" GridPane.rowIndex="3">
             <children>
                 <Button fx:id="btnAgregar" mnemonicParsing="false" onAction="#accionAgregar" text="Agregar Persona">
